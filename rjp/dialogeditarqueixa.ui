@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogEditarQueixa</class>
+ <widget class="QDialog" name="DialogEditarQueixa">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>473</width>
+    <height>266</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>220</y>
+     <width>341</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="btnSalvar">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 255, 162);</string>
+      </property>
+      <property name="text">
+       <string>Salvar</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnCancelar">
+      <property name="text">
+       <string>Cancelar</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnApagar">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 107, 107);</string>
+      </property>
+      <property name="text">
+       <string>Apagar</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>451</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Novo bairro:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="EditBoxBairro">
+          <property name="minimumSize">
+           <size>
+            <width>300</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>300</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <item>
+           <property name="text">
+            <string>  ---</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Agua Fria</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Altiplano</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Alto do Mateus</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Bairro das Indústrias</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Bairro dos Estados</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Bancários</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Bessa</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Brisamar</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Cabo Branco</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Castelo Branco</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Centro</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Cristo Redentor</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Cruz das Armas</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Ernesto Geisel</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Funcionários</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Grotão</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Jaguaribe</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>José Américo</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Manaíra</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Mangabeira</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Miramar</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Penha</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Portal do Sol</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Quadramares</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Rangel</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Róger</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>São José</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Tambaú</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Tambauzinho</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Torre</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Valentina Figueiredo</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Nova data:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDateEdit" name="dataNova">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Novo problema:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="EditBoxProblema">
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>  ---</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Alto índice de poluição nas ruas</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Obras abandonadas</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Pouca sinalização (semáforos, placas, etc)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Problemas elétricos (fios caídos, falta de energia recorrente, etc)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Problemas sanitários (vazamentos de esgoto, falta d'água, etc)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Vias obstruídas (buracos, árvores obstruindo, etc)</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
