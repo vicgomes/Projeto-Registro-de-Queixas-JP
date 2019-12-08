@@ -25,16 +25,6 @@ Queixa::Queixa()
     
 }
 
-QString Queixa::getNome() const
-{
-    return nome;
-}
-
-void Queixa::setNome(const QString &value)
-{
-    nome = value;
-}
-
 QString Queixa::getBairro() const
 {
     return bairro;

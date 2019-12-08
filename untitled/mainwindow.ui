@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1144</width>
-    <height>883</height>
+    <width>1369</width>
+    <height>584</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,10 +23,10 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>100</y>
-      <width>1071</width>
-      <height>591</height>
+      <x>10</x>
+      <y>10</y>
+      <width>1321</width>
+      <height>521</height>
      </rect>
     </property>
     <property name="font">
@@ -34,131 +34,58 @@
       <pointsize>10</pointsize>
      </font>
     </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
-      <string>Queixa</string>
+      <string>Submeter</string>
      </attribute>
-     <widget class="QLabel" name="label_9">
+     <widget class="QWidget" name="layoutWidget_2">
       <property name="geometry">
        <rect>
-        <x>-20</x>
-        <y>0</y>
-        <width>421</width>
-        <height>151</height>
+        <x>10</x>
+        <y>10</y>
+        <width>1271</width>
+        <height>461</height>
        </rect>
       </property>
-      <property name="styleSheet">
-       <string notr="true">image: url(:/imagens/noname.png);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>170</y>
-        <width>1001</width>
-        <height>341</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_9">
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_8">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_5">
+          <widget class="QLabel" name="label_9">
+           <property name="styleSheet">
+            <string notr="true">image: url(:/imagens/noname.png);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_4">
-             <property name="spacing">
-              <number>2</number>
-             </property>
+            <layout class="QVBoxLayout" name="verticalLayout">
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <layout class="QVBoxLayout" name="verticalLayout_2">
                <item>
-                <widget class="QLabel" name="label_8">
+                <widget class="QLabel" name="label_3">
                  <property name="font">
                   <font>
                    <pointsize>12</pointsize>
                   </font>
                  </property>
                  <property name="text">
-                  <string>Nome: </string>
+                  <string>Determine o bairro onde está localizado o problema:</string>
                  </property>
                 </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_10">
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(0, 0, 255);</string>
-                 </property>
-                 <property name="text">
-                  <string>(serve para identificar quem faz a queixa caso o mesmo queira editar algum detalhe, porém, sua identidade permanecerá no anonimato)</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="inputNome">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>30</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>30</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>11</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background-color: rgb(255, 255, 255);</string>
-               </property>
-               <property name="dragEnabled">
-                <bool>false</bool>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_3">
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_8">
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_7">
-                 <item>
-                  <widget class="QLabel" name="label_3">
-                   <property name="font">
-                    <font>
-                     <pointsize>12</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Bairro onde está localizado o problema:</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
                </item>
                <item>
                 <widget class="QComboBox" name="BoxBairro">
                  <property name="minimumSize">
                   <size>
-                   <width>0</width>
+                   <width>490</width>
                    <height>0</height>
                   </size>
                  </property>
@@ -343,68 +270,168 @@
                  </item>
                 </widget>
                </item>
-              </layout>
-             </item>
-             <item>
-              <layout class="QVBoxLayout" name="verticalLayout_2">
                <item>
-                <layout class="QVBoxLayout" name="verticalLayout">
-                 <property name="spacing">
-                  <number>2</number>
-                 </property>
-                </layout>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <layout class="QHBoxLayout" name="horizontalLayout">
                  <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_3">
-                   <item>
-                    <widget class="QLabel" name="label_5">
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                       <weight>50</weight>
-                       <bold>false</bold>
-                      </font>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true"/>
-                     </property>
-                     <property name="text">
-                      <string>Data do ocorrido: </string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QDateEdit" name="inputDataOcorrido">
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                      </font>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">background-color: rgb(255, 255, 255);</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <spacer name="horizontalSpacer_3">
-                     <property name="orientation">
-                      <enum>Qt::Horizontal</enum>
-                     </property>
-                     <property name="sizeHint" stdset="0">
-                      <size>
-                       <width>40</width>
-                       <height>20</height>
-                      </size>
-                     </property>
-                    </spacer>
-                   </item>
-                  </layout>
+                  <widget class="QLabel" name="label_5">
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="text">
+                    <string>Data do ocorrido: </string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDateEdit" name="inputDataOcorrido">
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);</string>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
                </item>
               </layout>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_12">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Agora, qual o problema que você deseja relatar:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="boxProblema">
+               <property name="minimumSize">
+                <size>
+                 <width>490</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>490</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <item>
+                <property name="text">
+                 <string>  ---</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Alto índice de poluição nas ruas</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Obras abandonadas</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Pouca sinalização (semáforos, placas, etc)</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Problemas elétricos (fios caídos, falta de energia recorrente, etc)</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Problemas sanitários (vazamentos de esgoto, falta d'água, etc)</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Vias obstruídas (buracos, árvores obstruindo, etc)</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Outro</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>229</width>
+                 <height>57</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButtonCadastrar">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>180</width>
+                 <height>60</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Submeter queixa</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </item>
@@ -413,182 +440,88 @@
         </layout>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_13">
+        <layout class="QVBoxLayout" name="verticalLayout_10">
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout">
+          <layout class="QVBoxLayout" name="verticalLayout_7">
            <item>
-            <widget class="QLabel" name="label_12">
+            <widget class="QLabel" name="label_11">
              <property name="font">
               <font>
                <pointsize>12</pointsize>
               </font>
              </property>
              <property name="text">
-              <string>Insira abaixo uma suma do problema:</string>
+              <string>Todas as queixas:</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_6">
+            <widget class="QTableWidget" name="tabelaGeral">
              <property name="minimumSize">
               <size>
-               <width>120</width>
+               <width>600</width>
                <height>0</height>
               </size>
              </property>
-             <property name="maximumSize">
-              <size>
-               <width>120</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>12</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(0, 0, 255);</string>
-             </property>
-             <property name="text">
-              <string>*</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QComboBox" name="boxProblema">
-             <property name="maximumSize">
-              <size>
-               <width>490</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <item>
+             <attribute name="horizontalHeaderStretchLastSection">
+              <bool>true</bool>
+             </attribute>
+             <column>
               <property name="text">
-               <string>  ---</string>
+               <string>Bairro</string>
               </property>
-             </item>
-             <item>
+             </column>
+             <column>
               <property name="text">
-               <string>Alto índice de poluição nas ruas</string>
+               <string>Data da queixa</string>
               </property>
-             </item>
-             <item>
+             </column>
+             <column>
               <property name="text">
-               <string>Obras abandonadas</string>
+               <string>Data do ocorrido</string>
               </property>
-             </item>
-             <item>
+             </column>
+             <column>
               <property name="text">
-               <string>Pouca sinalização (semáforos, placas, etc)</string>
+               <string>Problema</string>
               </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Problemas elétricos (fios caídos, falta de energia recorrente, etc)</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Problemas sanitários (vazamentos de esgoto, falta d'água, etc)</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Vias obstruídas (buracos, árvores obstruindo, etc)</string>
-              </property>
-             </item>
+             </column>
             </widget>
            </item>
           </layout>
          </item>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_6">
-           <property name="spacing">
-            <number>2</number>
-           </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
            <item>
-            <widget class="QLabel" name="label_13">
-             <property name="font">
-              <font>
-               <pointsize>8</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(0, 0, 255);</string>
-             </property>
+            <widget class="QPushButton" name="btnOrdenarPorBairro">
              <property name="text">
-              <string>*Caso queira, descreva melhor o seu problema:</string>
+              <string>Organizar por bairro</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="inputProblema">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>30</height>
-              </size>
+            <widget class="QPushButton" name="btnAntigas">
+             <property name="text">
+              <string>Mais antigas</string>
              </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>11</pointsize>
-              </font>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnRecentes">
+             <property name="text">
+              <string>Mais recentes</string>
              </property>
             </widget>
            </item>
           </layout>
          </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_9">
          <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButtonCadastrar">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>180</width>
-             <height>60</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
+          <widget class="QLabel" name="label_2">
            <property name="styleSheet">
-            <string notr="true"/>
+            <string notr="true">color: rgb(0, 0, 255);</string>
            </property>
            <property name="text">
-            <string>Submeter queixa</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>20</width>
-             <height>20</height>
-            </size>
+            <string>Clique duas vezes na linha para editar.</string>
            </property>
           </widget>
          </item>
@@ -599,34 +532,44 @@
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
-      <string>Dados</string>
+      <string>Estatísticas</string>
      </attribute>
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>1031</width>
-        <height>441</height>
+        <x>160</x>
+        <y>160</y>
+        <width>661</width>
+        <height>181</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_10">
+      <layout class="QVBoxLayout" name="verticalLayout_5">
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_7">
+        <layout class="QVBoxLayout" name="verticalLayout_12">
          <item>
-          <widget class="QLabel" name="label_11">
+          <widget class="QLabel" name="label_4">
            <property name="font">
             <font>
              <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
-            <string>Todas as queixas:</string>
+            <string>Bairro com o maior número de incidentes urbanos:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QTableWidget" name="tabelaGeral">
+          <widget class="QTableWidget" name="tabelaEstatisticaBairro">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
            <attribute name="horizontalHeaderStretchLastSection">
             <bool>true</bool>
            </attribute>
@@ -637,17 +580,7 @@
            </column>
            <column>
             <property name="text">
-             <string>Data da queixa</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Data do ocorrido</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Problema</string>
+             <string>Quantidade</string>
             </property>
            </column>
           </widget>
@@ -655,140 +588,35 @@
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
          <item>
-          <widget class="QPushButton" name="btnOrdenarPorBairro">
+          <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>Organizar por bairro</string>
+            <string>Número de queixas relatadas no total:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="btnAntigas">
-           <property name="text">
-            <string>Mais antigas</string>
+          <widget class="QLabel" name="numQueixas">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
            </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="btnRecentes">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 255);</string>
+           </property>
            <property name="text">
-            <string>Mais recentes</string>
+            <string/>
            </property>
           </widget>
          </item>
         </layout>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QLabel" name="label_2">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>460</y>
-        <width>411</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 255);</string>
-      </property>
-      <property name="text">
-       <string>Clique duas vezes na linha para editar.</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_5">
-     <attribute name="title">
-      <string>Estatísticas</string>
-     </attribute>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>30</y>
-        <width>989</width>
-        <height>153</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_12">
-       <item>
-        <widget class="QLabel" name="label_4">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Bairro com o maior número de incidentes urbanos:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QTableWidget" name="tabelaEstatisticaBairro">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <attribute name="horizontalHeaderStretchLastSection">
-          <bool>true</bool>
-         </attribute>
-         <column>
-          <property name="text">
-           <string>Bairro</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Quantidade</string>
-          </property>
-         </column>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>210</y>
-        <width>989</width>
-        <height>26</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_4">
-       <item>
-        <widget class="QLabel" name="label">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Número de queixas relatadas no total:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="numQueixas">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(0, 0, 255);</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
        </item>
       </layout>
      </widget>
@@ -800,7 +628,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1144</width>
+     <width>1369</width>
      <height>26</height>
     </rect>
    </property>

@@ -6,6 +6,8 @@
 #include <QFileDialog>
 #include <QVector>
 #include <QMap>
+#include <QDebug>
+#include <algorithm>
 
 #include "queixa.h"
 #include "sistema.h"
@@ -35,6 +37,8 @@ public:
 
     void estatisticas();
 
+    const QString VAZIO = "  ---"; //texto no primeiro slot da ComboBox
+
 private slots:
     void on_pushButtonCadastrar_clicked();
 
@@ -52,7 +56,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    Sistema sistema;
+
+    QVector<Queixa> sistema;
 
     QMap<QString, int> contadorBairro;         // servirá pra contar o número de incidentes por bairro
     QVector<Queixa> backup;                    // para salvar o estado inicial da tabela

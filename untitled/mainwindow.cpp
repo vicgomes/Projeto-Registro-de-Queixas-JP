@@ -5,8 +5,6 @@
 #define INDICE_MAX 2
 #define DATA_MIN 2
 
-const QString VAZIO = "  ---"; //texto no primeiro slot da ComboBox
-
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -33,7 +31,6 @@ void MainWindow::on_pushButtonCadastrar_clicked() // o botão de submeter queixa
     // declarando e atribuindo valores às variáveis
     Queixa queixa;
 
-    QString nome_temp = ui->inputNome->text();
     QString boxBairro = ui->BoxBairro->currentText();
 
     QDate data = ui->inputDataOcorrido->date();
@@ -42,27 +39,25 @@ void MainWindow::on_pushButtonCadastrar_clicked() // o botão de submeter queixa
     QString aa = QString::number(ui->inputDataOcorrido->date().year());
 
     QString prob_temp = ui->boxProblema->currentText();
-    QString desc_temp = ui->inputProblema->text();
 
-    bool campo_nome = testar_campo(nome_temp);
     bool campo_bairro = testar_campo(boxBairro);
     bool campo_problema = testar_campo(prob_temp);
 
 
     /* testando se os campos estão devidamente preenchidos
     e inserindo alguns valores na classe */
-    if((campo_nome and campo_bairro and campo_problema) == true)
+    if(campo_bairro and campo_problema)
     {
-        queixa.setNome(nome_temp);                                  // nome
+        qDebug() << "cu";
         queixa.setBairro(boxBairro);                                // bairro
         queixa.setdataOcorrido(ajustando_data(dd, mm, aa));         // data do ocorrido
         queixa.setData(data);
         queixa.setProblema(prob_temp);                              // problema
-        queixa.setProbComDescricao(prob_temp, desc_temp);           // descrição de cada problema
-
+        qDebug() << "cu";
         // adicionando ao vetor da classe Sistema
-        sistema.inserir_queixa(queixa);
-        backup = sistema.getSistema();
+        sistema.push_back(queixa);
+        qDebug() << "cu";
+        backup = sistema;
         contadorBairro[queixa.getBairro()]++;
         num++;
 
@@ -89,7 +84,7 @@ void MainWindow::atualizar_tabela()
 {
     ui->tabelaGeral->setRowCount(0);
 
-    for(auto mostrar : sistema.sistema)
+    for(auto mostrar : sistema)
     {
         int linha = ui->tabelaGeral->rowCount();
         ui->tabelaGeral->insertRow(linha);
@@ -156,15 +151,12 @@ bool MainWindow::testar_campo(QString s)
 
 void MainWindow::esvaziar()
 {
-    ui->inputNome->clear();
     ui->BoxBairro->setCurrentIndex(0);
     ui->boxProblema->setCurrentIndex(0);
-    ui->inputProblema->clear();
 }
 
 void MainWindow::estatisticas()
 {
-    QVector<QString> retorno;
     QString temp;
     int queixas = 0;
 
@@ -185,8 +177,13 @@ void MainWindow::estatisticas()
 
 void MainWindow::on_btnOrdenarPorBairro_clicked()
 {
-    ui->tabelaGeral->clearContents();        // limpando para reorganizar
-    sistema.organizarPorBairro();
+    ui->tabelaGeral->clearContents();                                 // limpando para reorganizar
+
+    std::sort(sistema.begin(), sistema.end(), [](Queixa a, Queixa b)  // função implícita
+    {
+        return a.getBairro() < b.getBairro();
+    });
+
 
     for(int i = 0;i < sistema.size();i++)
     {
@@ -224,33 +221,49 @@ void MainWindow::on_actionSalvar_triggered()
 {
     QString filename;
     filename = QFileDialog::getSaveFileName(this,"Salvar arquivo","","*.csv");
-    if(sistema.salvar(filename) == true)
-    {
-        QMessageBox::information(this,"Salvo","Arquivo salvo com sucesso!");
-    }
+    QFile arquivo(filename);
 
-    else QMessageBox::critical(this,"Erro", "O arquivo não foi salvo.");
+        arquivo.open(QIODevice::WriteOnly);
+        if(arquivo.isOpen() == true)
+        {
+            for(auto e : sistema)
+            {
+                QString line = e.getBairro()+";"+e.getdataOcorrido()+";"+e.getProblema()+"\0";
+                arquivo.write(line.toLocal8Bit());
+            }
+
+            arquivo.close();
+            QMessageBox::information(this,"Salvo","Arquivo salvo com sucesso!");
+        }
+        else QMessageBox::critical(this,"Erro", "O arquivo não foi salvo.");
 }
 
 void MainWindow::on_actionCarregar_triggered()
 {
     QString filename;
-    filename = QFileDialog::getOpenFileName(this, "Abrir arquivo","","Arquivo separado por vírgulas(*.csv)");
-    if(sistema.carregar(filename) == true)
-    {
-        QMessageBox::critical(this,"Arquivo","O arquivo já foi lido, favor cheque a tabela!");
-    }
-    else
-    {
-        for(int i = 0;i < sistema.size();i++)
-        {
-            ui->tabelaGeral->insertRow(i);
-            input_tabelas(sistema[i], i);
-        }
+    filename = QFileDialog::getOpenFileName(this, "Abrir arquivo","","Arquivo separado por ;(*.csv)");
+    QFile arquivo(filename);
 
-        QMessageBox::information(this,"Arquivo"," O arquivo foi lido, cheque a tabela!");
-        estatisticas();
+    arquivo.open(QIODevice::ReadOnly);
+    QString line;
+    QStringList dados;
+    while(!arquivo.atEnd())
+    {
+        Queixa y;
+        QDate temp;
+        line = arquivo.readLine();
+        dados = line.split(";");
+
+        y.setBairro(dados[0]);
+        y.setData(temp.fromString(getData()));
+        y.setdataOcorrido(dados[2]);
+        y.setProblema(dados[3]);
+
+        sistema.push_back(y);
     }
+    arquivo.close();
+
+    ui->tabelaGeral->setRowCount(0);     // para limpar a tabela
 }
 
 void MainWindow::on_tabelaGeral_cellDoubleClicked(int row, int column)
@@ -261,7 +274,7 @@ void MainWindow::on_tabelaGeral_cellDoubleClicked(int row, int column)
     column = 0;
     if(edit.getExcluir())
     {
-        sistema.sistema.erase(sistema.sistema.begin()+row);
+        sistema.erase(sistema.begin()+row);
         atualizar_tabela();
     }
 

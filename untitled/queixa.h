@@ -9,7 +9,6 @@
 class Queixa
 {
 private:
-    QString nome;
     QString bairro;
 
     QString dataOcorrido;
@@ -20,9 +19,6 @@ private:
 
 public:
     Queixa();
-
-    QString getNome() const;
-    void setNome(const QString &value);
 
     QString getBairro() const;
     void setBairro(const QString &value);

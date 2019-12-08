@@ -12,15 +12,8 @@ class Sistema : public Queixa
 {
 public:
     Sistema();
-    Queixa operator[](int a);
-    QVector<Queixa> sistema;
 
-    QVector<Queixa> getSistema();
-    int size();
-
-    void inserir_queixa(Queixa q);
-
-    void organizarPorBairro();
+    void organizarPorBairro(QVector<Queixa> &sistema);
     void organizarPorDataOcorrido();
 
     bool salvar(QString dados);
