@@ -32,7 +32,7 @@ public:
 
     void esvaziar();
 
-    void estatisticas();
+    void estatisticas(int linha);
 
 private slots:
     void on_pushButtonCadastrar_clicked();

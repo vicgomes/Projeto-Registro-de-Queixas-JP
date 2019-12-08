@@ -62,9 +62,11 @@ void MainWindow::on_pushButtonCadastrar_clicked() // o botão de submeter queixa
         // inserindo as queixas na tabela geral
         int l1 = ui->tabelaGeral->rowCount();
         ui->tabelaGeral->insertRow(l1);
-        input_tabelas(queixa, l1);
+        int l2 = ui->tabelaEstatisticaBairro->rowCount();
+        ui->tabelaEstatisticaBairro->insertRow(l2);
 
-        estatisticas();
+        input_tabelas(queixa, l1);
+        estatisticas(l2);
     }
 
 
@@ -131,7 +133,7 @@ void MainWindow::esvaziar()
     ui->boxProblema->setCurrentIndex(0);
 }
 
-void MainWindow::estatisticas()
+void MainWindow::estatisticas(int linha)
 {
     QMap<QString, int> temp;
     QPair<QString, int> top1, top2, top3;
@@ -158,7 +160,6 @@ void MainWindow::estatisticas()
         }
     }
 
-    int linha = 3;
     ui->tabelaEstatisticaBairro->setItem(linha,0, new QTableWidgetItem(top1.first));
     ui->tabelaEstatisticaBairro->setItem(linha,1, new QTableWidgetItem(QString::number(top1.second)));
     ui->tabelaEstatisticaBairro->setItem(linha,0, new QTableWidgetItem(top2.first));
