@@ -48,7 +48,6 @@ void MainWindow::on_pushButtonCadastrar_clicked() // o botão de submeter queixa
     e inserindo alguns valores na classe */
     if(campo_bairro and campo_problema)
     {
-        qDebug() << "cu";
         queixa.setBairro(boxBairro);                                // bairro
         queixa.setdataOcorrido(ajustando_data(dd, mm, aa));         // data do ocorrido
         queixa.setData(data);
