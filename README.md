@@ -7,4 +7,4 @@
 ## Iniciando o programa
 
 Primeiro o usuário deve preencher os seguintes espaços:
-![https://github.com/vicgomes/Projeto-Registro-de-Queixas-JP/blob/master/fotos/Screenshot_1.png]
+![](https://github.com/vicgomes/Projeto-Registro-de-Queixas-JP/blob/master/fotos/Screenshot_1.png)
