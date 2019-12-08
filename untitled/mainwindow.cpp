@@ -5,6 +5,8 @@
 #define INDICE_MAX 2
 #define DATA_MIN 2
 
+const QString VAZIO = "  ---"; //texto no primeiro slot da ComboBox
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -48,6 +50,7 @@ void MainWindow::on_pushButtonCadastrar_clicked() // o botão de submeter queixa
     e inserindo alguns valores na classe */
     if(campo_bairro and campo_problema)
     {
+        qDebug() << "cu";
         queixa.setBairro(boxBairro);                                // bairro
         queixa.setdataOcorrido(ajustando_data(dd, mm, aa));         // data do ocorrido
         queixa.setData(data);
