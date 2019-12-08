@@ -34,3 +34,9 @@ Então, o usuário irá se deparar com a seguinte janela mostrada abaixo, em que
 Quando terminar a edição, a queixa terá sido alterada com sucesso:
 
 ![](https://github.com/vicgomes/Projeto-Registro-de-Queixas-JP/blob/master/fotos/Screenshot_6.png)
+
+## Estatísticas
+
+Por fim, as estatísticas serão mostradas ao usuário caso ele queira. Basta apenas clicar na aba chamada "Estatísticas", como é mostrada na imagem abaixo:
+
+![](https://github.com/vicgomes/Projeto-Registro-de-Queixas-JP/blob/master/fotos/Screenshot_7.png)
