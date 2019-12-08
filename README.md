@@ -35,6 +35,12 @@ Quando terminar a edição, a queixa terá sido alterada com sucesso:
 
 ![](https://github.com/vicgomes/Projeto-Registro-de-Queixas-JP/blob/master/fotos/Screenshot_6.png)
 
+
+Caso o usuário queira salvar a situação atual ou carregar um antigo, ele pode ir no canto superior esquerdo da tela, clicar em arquivo e escolher uma das opções (como mostra a foto) ou apenas utilizar os atalhos: CTRL + S para salvar e CTRL + L para carregar.
+
+![](https://github.com/vicgomes/Projeto-Registro-de-Queixas-JP/blob/master/fotos/Screenshot_8.png)
+
+
 ## Estatísticas
 
 Por fim, as estatísticas serão mostradas ao usuário caso ele queira. Basta apenas clicar na aba chamada "Estatísticas", como é mostrada na imagem abaixo:
